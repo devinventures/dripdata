@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ══════════════════════════════════════════════════════════════
+   LIGHT-MODE OVERRIDES
+   When <html> does NOT have the .dark class, remap the hard-
+   coded dark-gray palette to a clean light scale.
+   This lets every page stay dark by default while the toggle
+   flips the whole UI without touching individual components.
+══════════════════════════════════════════════════════════════ */
+
+/* ── Backgrounds ─────────────────────────────────────────── */
+html:not(.dark) .bg-gray-950  { background-color: #ffffff; }
+html:not(.dark) .bg-gray-900  { background-color: #f9fafb; }
+html:not(.dark) .bg-gray-800  { background-color: #f3f4f6; }
+html:not(.dark) .bg-gray-700  { background-color: #e5e7eb; }
+html:not(.dark) .bg-gray-600  { background-color: #d1d5db; }
+
+/* Opacity variants */
+html:not(.dark) .bg-gray-950\/50 { background-color: rgb(255 255 255 / 0.5); }
+html:not(.dark) .bg-gray-900\/50 { background-color: rgb(249 250 251 / 0.5); }
+html:not(.dark) .bg-gray-800\/70 { background-color: rgb(243 244 246 / 0.7); }
+html:not(.dark) .bg-gray-800\/60 { background-color: rgb(243 244 246 / 0.6); }
+html:not(.dark) .bg-gray-800\/30 { background-color: rgb(243 244 246 / 0.3); }
+html:not(.dark) .bg-gray-700\/60 { background-color: rgb(229 231 235 / 0.6); }
+html:not(.dark) .bg-gray-700\/40 { background-color: rgb(229 231 235 / 0.4); }
+
+/* Hover backgrounds */
+html:not(.dark) .hover\:bg-gray-800:hover { background-color: #e5e7eb; }
+html:not(.dark) .hover\:bg-gray-700:hover { background-color: #d1d5db; }
+html:not(.dark) .hover\:bg-gray-800\/50:hover { background-color: rgb(229 231 235 / 0.5); }
+
+/* Brand badge background (yield %) */
+html:not(.dark) .bg-brand-900\/30 { background-color: rgb(187 247 208 / 0.8); }
+
+/* ── Borders ──────────────────────────────────────────────── */
+html:not(.dark) .border-gray-800 { border-color: #e5e7eb; }
+html:not(.dark) .border-gray-700 { border-color: #d1d5db; }
+html:not(.dark) .border-gray-600 { border-color: #9ca3af; }
+
+/* White/transparent border variants → subtle dark */
+html:not(.dark) .border-white\/5  { border-color: rgb(0 0 0 / 0.06); }
+html:not(.dark) .border-white\/10 { border-color: rgb(0 0 0 / 0.10); }
+html:not(.dark) .border-white\/20 { border-color: rgb(0 0 0 / 0.15); }
+
+/* Hover borders */
+html:not(.dark) .hover\:border-gray-500:hover { border-color: #9ca3af; }
+
+/* ── Dividers ─────────────────────────────────────────────── */
+html:not(.dark) .divide-gray-800     > * + * { border-color: #e5e7eb; }
+html:not(.dark) .divide-gray-800\/60 > * + * { border-color: rgb(229 231 235 / 0.6); }
+html:not(.dark) .divide-gray-700     > * + * { border-color: #d1d5db; }
+
+/* ── Text ─────────────────────────────────────────────────── */
+html:not(.dark) .text-white    { color: #111827; }
+html:not(.dark) .text-gray-100 { color: #111827; }
+html:not(.dark) .text-gray-200 { color: #1f2937; }
+html:not(.dark) .text-gray-300 { color: #374151; }
+html:not(.dark) .text-gray-400 { color: #4b5563; }
+/* gray-500 and below are medium grays — fine on both backgrounds */
+
+/* Brand text: darken for better contrast on white */
+html:not(.dark) .text-brand-400 { color: #16a34a; }
+html:not(.dark) .text-brand-500 { color: #15803d; }
+
+/* Group-hover brand text */
+html:not(.dark) .group:hover .group-hover\:text-brand-400 { color: #16a34a; }
+
+/* Hover text */
+html:not(.dark) .hover\:text-white:hover       { color: #111827; }
+html:not(.dark) .hover\:text-brand-400:hover   { color: #16a34a; }
+html:not(.dark) .hover\:text-red-400:hover     { color: #dc2626; }
+
+/* ── Keep white text on colored (brand/action) backgrounds ── */
+html:not(.dark) .bg-brand-600 .text-white,
+html:not(.dark) .bg-brand-600.text-white,
+html:not(.dark) .bg-brand-700 .text-white,
+html:not(.dark) .bg-brand-700.text-white       { color: #ffffff; }
+
+/* ── Ring (focus / drag-over) ────────────────────────────── */
+html:not(.dark) .ring-white\/20 { --tw-ring-color: rgb(0 0 0 / 0.12); }
+
+/* ── Recharts tooltip (rendered as inline elements) ─────── */
+html:not(.dark) .recharts-tooltip-wrapper .bg-gray-800 { background-color: #ffffff; }
+html:not(.dark) .recharts-tooltip-wrapper .border-gray-700 { border-color: #e5e7eb; }
+html:not(.dark) .recharts-tooltip-wrapper .text-white { color: #111827; }
+html:not(.dark) .recharts-tooltip-wrapper .text-gray-400 { color: #6b7280; }
+
+/* ── Tier-list colored backgrounds (keep as-is — they're   ─ */
+/* ── already translucent colored, looks fine on light bg)  ─ */

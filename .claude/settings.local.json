@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git --name dripdata)",
+      "Bash(npm install)",
+      "Bash(npm run build)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(npm install recharts)",
+      "Bash(node -e \"console.log\\(require\\(''/Users/noah/Desktop/Devin Ventures/Sites/DripData/node_modules/next/package.json''\\).version\\)\")",
+      "Bash(xargs cat -n)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/tier-list)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/)",
+      "Bash(python3 -c \"import openpyxl; print\\(''openpyxl available''\\)\")",
+      "Bash(pip3 install openpyxl)",
+      "Bash(pip3 install --user openpyxl)",
+      "Bash(pip3 install --break-system-packages openpyxl)",
+      "Bash(python3 -c \":*)",
+      "Bash(python3:*)",
+      "WebFetch(domain:ranaroussi.github.io)",
+      "WebFetch(domain:github.com)",
+      "Bash(npm install yahoo-finance2)",
+      "Bash(node -e \"const yf = require\\(''yahoo-finance2''\\); yf.quoteSummary\\(''SCHD'', { modules: [''summaryDetail'',''fundProfile'',''topHoldings'',''defaultKeyStatistics''] }\\).then\\(r => console.log\\(JSON.stringify\\({ expenseRatio: r.summaryDetail?.expenseRatio, totalAssets: r.summaryDetail?.totalAssets, fundFamily: r.fundProfile?.fundFamily, category: r.fundProfile?.categoryName, holdings: r.topHoldings?.holdings?.slice\\(0,3\\), beta: r.defaultKeyStatistics?.beta3Year }, null, 2\\)\\)\\).catch\\(e => console.error\\(''ERROR:'', e.message\\)\\)\")",
+      "Bash(node --input-type=module:*)",
+      "Bash(npm install @clerk/nextjs)",
+      "Bash(/opt/homebrew/bin/npm install @supabase/ssr)",
+      "Bash(/opt/homebrew/bin/npm uninstall @clerk/nextjs)",
+      "Bash(export PATH=\"/opt/homebrew/bin:$HOME/.nvm/versions/node/v20.19.2/bin:$PATH\")",
+      "Bash(node --version)",
+      "Bash(npm install @supabase/ssr)",
+      "Bash(npm uninstall @clerk/nextjs)",
+      "Bash(\"/Users/noah/Desktop/Devin Ventures/Sites/dripdata/.env.local\":*)"
+    ]
+  }
+}

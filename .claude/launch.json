@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "DripData",
+      "runtimeExecutable": "/bin/bash",
+      "runtimeArgs": ["-c", "PATH=/opt/homebrew/bin:$HOME/.nvm/versions/node/v20.19.2/bin:$PATH npm run dev"],
+      "port": 3000
+    }
+  ]
+}
