@@ -91,7 +91,7 @@ export default async function Home() {
               {/* Badge */}
               <div className="inline-flex items-center gap-2 bg-brand-900/30 border border-brand-700/40 text-brand-400 text-sm font-medium px-4 py-1.5 rounded-full mb-8">
                 <span>💧</span>
-                <span>Free · Live Market Data · No Credit Card</span>
+                <span>Live Market Data · Pro from $5/month</span>
               </div>
 
               {/* Headline */}
@@ -134,9 +134,9 @@ export default async function Home() {
           <section className="border-y border-gray-800 py-5 mb-16">
             <div className="flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm text-gray-400">
               {[
-                { label: "Free Tools", value: "9+" },
+                { label: "Free Tools", value: "8+" },
                 { label: "Data Source", value: "Yahoo Finance" },
-                { label: "No Credit Card", value: "Always Free" },
+                { label: "Portfolio Tracker", value: "Pro $5/mo" },
                 { label: "Light & Dark Mode", value: "✓" },
               ].map((s) => (
                 <div key={s.label} className="flex items-center gap-2">
@@ -181,8 +181,8 @@ export default async function Home() {
 
           {/* Tool preview grid ───────────────────────────────────────────── */}
           <section className="mb-16">
-            <h2 className="text-2xl font-bold text-center mb-2">All tools, free to use</h2>
-            <p className="text-gray-400 text-center mb-10">Create an account to unlock everything instantly.</p>
+            <h2 className="text-2xl font-bold text-center mb-2">All tools, one platform</h2>
+            <p className="text-gray-400 text-center mb-10">Most tools are free. Portfolio Tracker requires Pro ($5/month).</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {tools.map((t) => (
                 <div
@@ -213,13 +213,13 @@ export default async function Home() {
               Start building your dividend portfolio today
             </h2>
             <p className="text-gray-400 mb-8 max-w-lg mx-auto text-lg">
-              Join DripData and get instant access to every tool — free, with live data, no spreadsheets required.
+              Join DripData and get instant access to free tools — upgrade to Pro for $5/month to unlock the Portfolio Tracker.
             </p>
             <Link
               href="/sign-up"
               className="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-500 text-white font-semibold px-8 py-3.5 rounded-xl transition-colors shadow-lg shadow-brand-900/40 text-base"
             >
-              Create Free Account
+              Get Started
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
