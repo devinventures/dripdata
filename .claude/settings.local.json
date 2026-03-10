@@ -29,7 +29,9 @@
       "Bash(node --version)",
       "Bash(npm install @supabase/ssr)",
       "Bash(npm uninstall @clerk/nextjs)",
-      "Bash(\"/Users/noah/Desktop/Devin Ventures/Sites/dripdata/.env.local\":*)"
+      "Bash(\"/Users/noah/Desktop/Devin Ventures/Sites/dripdata/.env.local\":*)",
+      "Bash(lsof -ti:3000)",
+      "Bash(xargs kill -9)"
     ]
   }
 }

@@ -207,12 +207,12 @@ export default async function Home() {
           </section>
 
           {/* Bottom CTA ──────────────────────────────────────────────────── */}
-          <section className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-brand-900/50 via-gray-900 to-gray-900 border border-brand-800/30 p-10 sm:p-14 text-center mb-8">
+          <section className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-brand-50 to-white dark:from-brand-900/50 dark:via-gray-900 dark:to-gray-900 border border-brand-200 dark:border-brand-800/30 p-10 sm:p-14 text-center mb-8">
             <div className="absolute bottom-0 right-0 w-72 h-72 bg-brand-600/10 rounded-full blur-3xl -z-10" />
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
               Start building your dividend portfolio today
             </h2>
-            <p className="text-gray-400 mb-8 max-w-lg mx-auto text-lg">
+            <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-lg mx-auto text-lg">
               Join DripData and get instant access to free tools — upgrade to Pro for $5/month to unlock the Portfolio Tracker.
             </p>
             <Link
