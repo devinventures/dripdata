@@ -8,7 +8,20 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "DripData — Dividend Tools",
-  description: "Real-time dividend calculators and portfolio trackers",
+  description: "Real-time yield calculators, ETF deep-dives, and portfolio tracking — built for income investors.",
+  metadataBase: new URL("https://dripdata.co"),
+  openGraph: {
+    title: "DripData — Dividend Tools",
+    description: "Real-time yield calculators, ETF deep-dives, and portfolio tracking — built for income investors.",
+    url: "https://dripdata.co",
+    siteName: "DripData",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DripData — Dividend Tools",
+    description: "Real-time yield calculators, ETF deep-dives, and portfolio tracking — built for income investors.",
+  },
 };
 
 export default function RootLayout({
