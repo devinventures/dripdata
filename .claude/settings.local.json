@@ -31,7 +31,12 @@
       "Bash(npm uninstall @clerk/nextjs)",
       "Bash(\"/Users/noah/Desktop/Devin Ventures/Sites/dripdata/.env.local\":*)",
       "Bash(lsof -ti:3000)",
-      "Bash(xargs kill -9)"
+      "Bash(xargs kill -9)",
+      "Bash(for dir in drip-calculator income-projector total-return yield-trap compare tier-list live-on-dividends)",
+      "Bash(do)",
+      "Bash(cp \"/Users/noah/Desktop/Devin Ventures/Sites/dripdata/src/app/yield-calculator/layout.tsx\" \"/Users/noah/Desktop/Devin Ventures/Sites/dripdata/src/app/$dir/layout.tsx\")",
+      "Bash(echo \"Created $dir/layout.tsx\")",
+      "Bash(done)"
     ]
   }
 }
