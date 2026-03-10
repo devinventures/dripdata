@@ -134,8 +134,8 @@ export default async function Home() {
           <section className="border-y border-gray-800 py-5 mb-16">
             <div className="flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm text-gray-400">
               {[
-                { label: "Free Tools", value: "8+" },
-                { label: "Data Source", value: "Yahoo Finance" },
+                { label: "Dividend Tools", value: "8+" },
+                { label: "Live Market Data", value: "✓" },
                 { label: "Portfolio Tracker", value: "Pro $5/mo" },
                 { label: "Light & Dark Mode", value: "✓" },
               ].map((s) => (
@@ -181,8 +181,8 @@ export default async function Home() {
 
           {/* Tool preview grid ───────────────────────────────────────────── */}
           <section className="mb-16">
-            <h2 className="text-2xl font-bold text-center mb-2">All tools, one platform</h2>
-            <p className="text-gray-400 text-center mb-10">Most tools are free. Portfolio Tracker requires Pro ($5/month).</p>
+            <h2 className="text-2xl font-bold text-center mb-2">Everything in one platform</h2>
+            <p className="text-gray-400 text-center mb-10">Yield calculators, ETF research, and more. Portfolio Tracker requires Pro ($5/month).</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {tools.map((t) => (
                 <div
