@@ -201,24 +201,24 @@ function ETFLookupInner() {
                 <p className="text-gray-400 text-xs uppercase tracking-wider mb-0.5">{data.ticker}</p>
                 <h2 className="text-xl font-bold">{data.name}</h2>
                 {/* Metadata badges */}
-                <div className="flex flex-wrap gap-1.5 mt-2">
+                <div className="flex flex-wrap gap-2 mt-2">
                   {(data.fund?.legalType ?? data.instrument_type) && (
-                    <span className="text-xs bg-brand-900/40 text-brand-300 border border-brand-800/50 px-2 py-0.5 rounded-full">
+                    <span className="text-xs bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 border border-gray-300 dark:border-gray-700 px-2.5 py-1 rounded-full">
                       {data.fund?.legalType ?? data.instrument_type}
                     </span>
                   )}
                   {data.fund?.category && (
-                    <span className="text-xs bg-brand-900/30 text-brand-300 border border-brand-800/40 px-2 py-0.5 rounded-full">
+                    <span className="text-xs bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 border border-gray-300 dark:border-gray-700 px-2.5 py-1 rounded-full">
                       {data.fund.category}
                     </span>
                   )}
                   {data.fund?.fundFamily && (
-                    <span className="text-xs bg-gray-800 text-gray-300 border border-gray-700 px-2 py-0.5 rounded-full">
+                    <span className="text-xs bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-300 border border-gray-300 dark:border-gray-700 px-2.5 py-1 rounded-full">
                       {data.fund.fundFamily}
                     </span>
                   )}
                   {data.list_date && (
-                    <span className="text-xs bg-gray-800 text-gray-400 border border-gray-700 px-2 py-0.5 rounded-full">
+                    <span className="text-xs bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 border border-gray-300 dark:border-gray-700 px-2.5 py-1 rounded-full">
                       Since {data.list_date.slice(0, 4)}
                     </span>
                   )}
