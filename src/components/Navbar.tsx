@@ -5,6 +5,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useTheme } from "@/components/ThemeProvider";
 import { createSupabaseBrowserClient } from "@/lib/supabase-client";
 import type { User } from "@supabase/supabase-js";
+import { RESEARCH_LINKS, CALCULATOR_LINKS } from "@/lib/navigation";
 
 type SubscriptionStatus = "active" | "trialing" | "past_due" | "canceled" | "unpaid" | "free" | null;
 
@@ -26,26 +27,32 @@ interface PortfolioGroup {
   name: string;
 }
 
+// Extra metadata (desc + icon) layered on top of the shared link list
+const RESEARCH_META: Pick<NavItem, "desc" | "icon">[] = [
+  { icon: "🔍", desc: "Full data snapshot — price, yield & history" },
+  { icon: "📋", desc: "Browse 30+ income ETFs — yield, AUM & return" },
+  { icon: "⚖️", desc: "Side-by-side multi-ETF total return chart" },
+  { icon: "🏅", desc: "Ranked income ETF picks — no YieldMax" },
+];
+
+const CALCULATOR_META: Pick<NavItem, "desc" | "icon">[] = [
+  { icon: "%",  desc: "Instant live yield from any ticker" },
+  { icon: "💧", desc: "Model dividend reinvestment compounding" },
+  { icon: "📈", desc: "Multi-year dividend income forecast" },
+  { icon: "🏆", desc: "Price appreciation + dividends combined" },
+  { icon: "🌴", desc: "Plan the portfolio size needed to retire on income" },
+  { icon: "🪤", desc: "Is that high yield real income or a NAV trap?" },
+];
+
 const navGroups: NavGroup[] = [
   { label: "Home", href: "/" },
   {
     label: "Research",
-    items: [
-      { href: "/etf-lookup",  label: "ETF Lookup",  desc: "Full data snapshot — price, yield & history", icon: "🔍" },
-      { href: "/compare",     label: "Compare",     desc: "Side-by-side multi-ETF total return chart",  icon: "⚖️" },
-      { href: "/tier-list",   label: "Tier List",   desc: "Ranked income ETF picks — no YieldMax",       icon: "🏅" },
-    ],
+    items: RESEARCH_LINKS.map((l, i) => ({ ...l, ...RESEARCH_META[i] })),
   },
   {
     label: "Calculators",
-    items: [
-      { href: "/yield-calculator",  label: "Yield Calculator",   desc: "Instant live yield from any ticker",               icon: "%" },
-      { href: "/drip-calculator",   label: "DRIP Calculator",    desc: "Model dividend reinvestment compounding",           icon: "💧" },
-      { href: "/income-projector",  label: "Income Projector",   desc: "Multi-year dividend income forecast",               icon: "📈" },
-      { href: "/total-return",      label: "Total Return",       desc: "Price appreciation + dividends combined",           icon: "🏆" },
-      { href: "/live-on-dividends", label: "Live On Dividends",  desc: "Plan the portfolio size needed to retire on income", icon: "🌴" },
-      { href: "/yield-trap",        label: "Yield Trap",         desc: "Is that high yield real income or a NAV trap?",     icon: "🪤" },
-    ],
+    items: CALCULATOR_LINKS.map((l, i) => ({ ...l, ...CALCULATOR_META[i] })),
   },
 ];
 
@@ -225,7 +232,6 @@ export default function Navbar() {
                             : "text-gray-400 hover:text-white hover:bg-gray-800/40"
                         }`}
                       >
-                        <span className="text-base leading-none">📊</span>
                         <span className="truncate">{p.name}</span>
                       </Link>
                     );

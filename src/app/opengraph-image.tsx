@@ -10,76 +10,107 @@ export default function OGImage() {
     (
       <div
         style={{
-          background: "linear-gradient(135deg, #0a0a0a 0%, #111827 50%, #0a0a0a 100%)",
+          background: "#0a0a0a",
           width: "100%",
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
+          justifyContent: "space-between",
           fontFamily: "sans-serif",
+          padding: "60px 72px",
           position: "relative",
+          overflow: "hidden",
         }}
       >
-        {/* Glow */}
+        {/* Background glow top-right */}
         <div
           style={{
             position: "absolute",
-            top: -100,
-            left: "50%",
-            transform: "translateX(-50%)",
-            width: 600,
-            height: 400,
-            background: "radial-gradient(ellipse, rgba(34,197,94,0.15) 0%, transparent 70%)",
+            top: -120,
+            right: -80,
+            width: 500,
+            height: 500,
+            background: "radial-gradient(ellipse, rgba(34,197,94,0.18) 0%, transparent 65%)",
             borderRadius: "50%",
+            display: "flex",
+          }}
+        />
+        {/* Background glow bottom-left */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: -100,
+            left: -60,
+            width: 400,
+            height: 400,
+            background: "radial-gradient(ellipse, rgba(34,197,94,0.08) 0%, transparent 65%)",
+            borderRadius: "50%",
+            display: "flex",
           }}
         />
 
-        {/* Logo */}
-        <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 32 }}>
-          <span style={{ fontSize: 52 }}>💧</span>
-          <span style={{ fontSize: 52, fontWeight: 800, color: "#ffffff" }}>
-            Drip<span style={{ color: "#22c55e" }}>Data</span>
+        {/* Top: Logo */}
+        <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+          <span style={{ fontSize: 38 }}>💧</span>
+          <div style={{ display: "flex", alignItems: "baseline" }}>
+            <span style={{ fontSize: 38, fontWeight: 800, color: "#ffffff", letterSpacing: "-1px" }}>Drip</span>
+            <span style={{ fontSize: 38, fontWeight: 800, color: "#22c55e", letterSpacing: "-1px" }}>Data</span>
+          </div>
+        </div>
+
+        {/* Middle: Headline */}
+        <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+            <span
+              style={{
+                fontSize: 68,
+                fontWeight: 800,
+                color: "#ffffff",
+                lineHeight: 1.1,
+                letterSpacing: "-2px",
+              }}
+            >
+              Your Dividend Research,
+            </span>
+            <span
+              style={{
+                fontSize: 68,
+                fontWeight: 800,
+                color: "#22c55e",
+                lineHeight: 1.1,
+                letterSpacing: "-2px",
+              }}
+            >
+              All in One Place
+            </span>
+          </div>
+          <span
+            style={{
+              fontSize: 26,
+              color: "#9ca3af",
+              maxWidth: 680,
+              lineHeight: 1.45,
+            }}
+          >
+            Real-time yield calculators, ETF deep-dives, and portfolio tracking for income investors.
           </span>
         </div>
 
-        {/* Tagline */}
-        <div
-          style={{
-            fontSize: 28,
-            color: "#9ca3af",
-            textAlign: "center",
-            maxWidth: 700,
-            lineHeight: 1.4,
-            marginBottom: 48,
-          }}
-        >
-          Yield calculators, ETF deep-dives &amp; portfolio tracking for income investors
-        </div>
-
-        {/* Pills */}
-        <div style={{ display: "flex", gap: 16 }}>
-          {["Dividend Yield Calculator", "ETF Lookup", "DRIP Calculator", "Portfolio Tracker"].map((t) => (
-            <div
-              key={t}
-              style={{
-                background: "rgba(34,197,94,0.1)",
-                border: "1px solid rgba(34,197,94,0.3)",
-                color: "#4ade80",
-                padding: "8px 18px",
-                borderRadius: 999,
-                fontSize: 16,
-                fontWeight: 600,
-              }}
-            >
-              {t}
-            </div>
-          ))}
-        </div>
-
-        {/* URL */}
-        <div style={{ position: "absolute", bottom: 40, color: "#4b5563", fontSize: 20 }}>
-          dripdata.co
+        {/* Bottom: Stats + URL */}
+        <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between" }}>
+          <div style={{ display: "flex", gap: 48 }}>
+            {[
+              { value: "8+", label: "Dividend Tools" },
+              { value: "Live", label: "Market Data" },
+              { value: "$5/mo", label: "Pro Plan" },
+            ].map((s) => (
+              <div key={s.label} style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+                <span style={{ fontSize: 32, fontWeight: 800, color: "#22c55e" }}>{s.value}</span>
+                <span style={{ fontSize: 17, color: "#6b7280" }}>{s.label}</span>
+              </div>
+            ))}
+          </div>
+          <span style={{ fontSize: 20, color: "#374151", fontWeight: 500 }}>dripdata.co</span>
         </div>
       </div>
     ),

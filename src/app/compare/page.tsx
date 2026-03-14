@@ -12,6 +12,7 @@ import {
   ReferenceLine,
 } from "recharts";
 import TickerSearch from "@/components/TickerSearch";
+import { fmtMoney, fmtPct } from "@/lib/formatters";
 
 type Preset = "1y" | "3y" | "5y" | "custom";
 
@@ -69,15 +70,6 @@ function mergeSeries(results: GrowthData[]): Record<string, number | string>[] {
   });
 }
 
-function fmtPct(n: number) {
-  return `${n >= 0 ? "+" : ""}${(n * 100).toFixed(2)}%`;
-}
-
-function fmtMoney(v: number) {
-  if (v >= 1_000_000) return `$${(v / 1_000_000).toFixed(1)}M`;
-  if (v >= 1_000) return `$${(v / 1_000).toFixed(1)}k`;
-  return `$${v.toFixed(0)}`;
-}
 
 export default function ComparePage() {
   const [tickers, setTickers] = useState<string[]>(["", ""]);

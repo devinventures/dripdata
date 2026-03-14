@@ -9,13 +9,13 @@ const ThemeContext = createContext<{ theme: Theme; toggle: () => void }>({
 });
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>("dark");
+  const [theme, setTheme] = useState<Theme>("light");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
     const stored = localStorage.getItem("drip-theme") as Theme | null;
-    const resolved = stored ?? "dark";
+    const resolved = stored ?? "light";
     setTheme(resolved);
     document.documentElement.classList.toggle("dark", resolved === "dark");
   }, []);
@@ -30,7 +30,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <ThemeContext.Provider value={{ theme: mounted ? theme : "dark", toggle }}>
+    <ThemeContext.Provider value={{ theme: mounted ? theme : "light", toggle }}>
       {children}
     </ThemeContext.Provider>
   );
